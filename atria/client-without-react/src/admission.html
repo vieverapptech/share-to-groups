@@ -1,0 +1,52 @@
+
+<!DOCTYPE html>
+<head>
+    <title>my title</title>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+</head>
+<body>
+    
+
+
+    <div id="page-title">Demo on Full stack</div>
+    <div id="menu-items">
+        <a href="index.html">Home</a>
+        <a href="admission.html">Admission</a>
+        <a href="viewstudents.html">View Students</a>
+        <a href="award.html">Award</a>
+
+    </div>
+
+    <div id="content-area">
+        <div id="admission-div" >
+          
+            <form id="admission-form" >
+        
+                <label for="name">name</label><br/>
+                <input type="text" id="name" name="name" ><br/>
+                
+                <label for="schoolgrade">schoolgrade</label><br/>
+                <input type="text" id="schoolgrade" name="schoolgrade" ><br/>
+                
+                <label for="address">address</label><br/>
+                <input type="text" id="address" name="address" ><br/>
+                
+                <label for="email">email</label><br/>
+                <input type="text" id="email" name="email" ><br/><br/>
+
+                <label for="degree">degree</label><br/>
+                <input type="text" id="degree" name="degree" value="not-awarded"><br/><br/>
+
+                <input type="button"  value="Submit" onclick="admissionformevent()">
+                
+              </form>
+              
+              <div id="admission-status"></div>
+        </div>
+    </div>
+
+</body>
+</html>
+

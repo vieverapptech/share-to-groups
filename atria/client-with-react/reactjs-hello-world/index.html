@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Hello React!</title>
+    <script src="https://unpkg.com/react@17.0.2/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom@17.0.2/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/babel-standalone@6.26.0/babel.js"></script>
+  </head>
+
+  <body>
+    <div id="root"></div>
+    <div id="mytbl"></div>
+
+    <script type="text/babel">
+      class App extends React.Component {
+        render() {
+          return <h1>Hello world ReactJS App by Vi!
+            <MyTable />
+          </h1>
+        }
+      }
+
+      class MyTable extends React.Component {
+        render() {
+          return (<table>
+            <th>
+              <td>Name</td>
+              <td>Grade</td>
+            </th>
+            <tr>
+              <td>Abi</td>
+              <td>A</td>
+            </tr>
+          </table>)
+        }
+      }
+
+      ReactDOM.render(<App />, document.getElementById('root'));
+      ReactDOM.render(<MyTable />, document.getElementById('mytbl'))
+    </script>
+  </body>
+</html>
