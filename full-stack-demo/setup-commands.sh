@@ -26,6 +26,26 @@ docker run --rm -d -p 9001:9001 --network="fs_demo" --ip="10.0.1.5" -h serverhos
 docker run --rm -d -p 8081:80 --network="fs_demo" --ip="10.0.1.4" -h clienthost --name demo_client_container demo_client
 
 
+curl -X GET \
+  http://localhost:9001/students \
+  -H 'cache-control: no-cache' \
+  -H 'content-type: application/json' 
+
+curl -X POST \
+  http://localhost:9001/students/admit \
+  -H 'cache-control: no-cache' \
+  -H 'content-type: application/json' \
+  -H 'postman-token: 9fcef601-face-f654-c61a-c88bc0bda0c7' \
+  -d '{
+	"name": "ajayc",
+	"dob": "2000-01-01",
+	"schoolgrade": "A",
+    "degree": "not-awarded",
+    "address": "abc street, blore",
+    "email": "vijay@abc.com"
+}'
+
+
 #server requests
 POST http://localhost:9001/students/admit
 {

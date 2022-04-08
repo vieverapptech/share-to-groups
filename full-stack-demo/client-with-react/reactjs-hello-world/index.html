@@ -10,7 +10,7 @@
 
   <body>
     <div id="root"></div>
-    <div id="mytbl"></div>
+    
 
     <script type="text/babel">
       class App extends React.Component {
@@ -23,20 +23,27 @@
 
       class MyTable extends React.Component {
         render() {
-          return (<table>
-            <th>
-              <td>Name</td>
-              <td>Grade</td>
-            </th>
-            <tr>
-              <td>Abi</td>
-              <td>A</td>
-            </tr>
-            <tr>
-              <td>Ajay</td>
-              <td>B</td>
-            </tr>
-          </table>)
+          return (
+            <table>
+            <thead>
+              <tr>
+                <th>name</th>
+                <th>grade</th>
+              </tr>
+            </thead>
+            <tbody>
+          <tr>
+            <td>hellostudent1</td>
+            <td>A</td>
+          </tr>
+          <tr>
+            <td>hellostudent1</td>
+            <td>B</td>
+          </tr>
+      </tbody>
+        </table>
+
+          );
         }
       }
 
