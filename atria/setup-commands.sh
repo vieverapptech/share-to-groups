@@ -7,7 +7,7 @@
 #C:\Windows\System32\drivers\etc\hosts
 
 #setup docker network
-  docker network create --driver="bridge" --subnet="10.0.0.0/16" --ip-range"10.0.1.0/24" fs_demo
+  docker network create --driver="bridge" --subnet="10.0.0.0/16" --ip-range="10.0.1.0/24" fs_demo
   docker network ls
 
 # stop if any previously running containers
