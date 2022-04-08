@@ -15,9 +15,9 @@
     <script type="text/babel">
       class App extends React.Component {
         render() {
-          return <h1>Hello world ReactJS App by Vi!
+          return <div>
             <MyTable />
-          </h1>
+          </div>
         }
       }
 
@@ -32,12 +32,16 @@
               <td>Abi</td>
               <td>A</td>
             </tr>
+            <tr>
+              <td>Ajay</td>
+              <td>B</td>
+            </tr>
           </table>)
         }
       }
 
       ReactDOM.render(<App />, document.getElementById('root'));
-      ReactDOM.render(<MyTable />, document.getElementById('mytbl'))
+     
     </script>
   </body>
 </html>

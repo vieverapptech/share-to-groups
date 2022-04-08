@@ -25,3 +25,18 @@ docker run --rm -d -p 9001:9001 --network="fs_demo" --ip="10.0.1.5" -h serverhos
 # client container
 docker run --rm -d -p 8081:80 --network="fs_demo" --ip="10.0.1.4" -h clienthost --name demo_client_container demo_client
 
+
+#server requests
+POST http://localhost:9001/students/admit
+{
+	"name": "ajaya",
+	"dob": "2000-01-01",
+	"schoolgrade": "A",
+    "degree": "not-awarded",
+    "address": "abc street, blore",
+    "email": "vijay@abc.com"
+}
+
+GET http://localhost:9001/students
+
+POST http://localhost:9001/students/award/62275fe776327c2e7ee6a3f5 
