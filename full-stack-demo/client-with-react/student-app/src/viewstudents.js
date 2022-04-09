@@ -53,7 +53,7 @@ class ViewStudents extends React.Component {
       .then(res => res.json())
       .then(
         (result) => {
-          this.setState({
+            this.setState({
             isLoaded: true,
             items: result
           });
@@ -64,10 +64,25 @@ class ViewStudents extends React.Component {
             error
           });
         }
-      )
+      );
+
+      /*
+      setTimeout(()=>{
+      this.setState({
+        isLoaded: true
+      })}, 2000);
+      */
   }
 
   render() {
+    const tstyle = {
+      border: "solid 1px #DDD",
+      borderCollapse: "collapse",
+      padding: "2px 3px",
+      textAlign: "center",
+      margin: "10px"
+    };
+
     const { error, isLoaded, items } = this.state;
     if (error) {
       return <div>Error: {error.message}</div>;
@@ -75,13 +90,42 @@ class ViewStudents extends React.Component {
       return <div>Loading...</div>;
     } else {
       return (
-        <ul>
+        <table style={tstyle}>
+        <thead>
+          <tr style={tstyle}>
+            <th>id</th>
+            <th>name</th>
+            <th>schoolgrade</th>
+            <th>address</th>
+            <th>degree</th>
+            <th>email</th>
+          </tr>
+        </thead>
+        <tbody>
           {items.map(item => (
-            <li key={item._id}>
-              {item._id} {item.name} {item.degree}
-            </li>
+            <tr key={item._id} style={tstyle}>
+            <td >
+              {item._id}
+            </td>
+            <td >
+               {item.name} 
+            </td>
+            <td >
+               {item.schoolgrade}
+            </td>
+            <td >
+               {item.address}
+            </td>
+            <td >
+               {item.degree}
+            </td>
+            <td >
+               {item.email}
+            </td>
+            </tr>
           ))}
-        </ul>
+         </tbody>
+        </table>
       );
     }
   }

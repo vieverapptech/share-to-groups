@@ -13,6 +13,7 @@ render(
   <BrowserRouter>
     <Routes>
       <Route path="/" element={<App />}>
+      
         <Route path="views" element={<ViewStudents />} />
         <Route path="admits" element={<AdmitStudent />} />
          </Route>
